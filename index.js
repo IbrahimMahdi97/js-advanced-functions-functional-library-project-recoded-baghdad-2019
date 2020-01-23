@@ -52,7 +52,7 @@ const fi = (function() {
       const nArr = []
 
       for (let idx = 0; idx < collection.length; idx++)
-        if (predicate(collection[idx])) newArr.push(collection[idx])
+        if (predicate(collection[idx])) nArr.push(collection[idx])
 
       return nArr
     },
