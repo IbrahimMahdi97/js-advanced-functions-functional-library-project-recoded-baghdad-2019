@@ -170,7 +170,7 @@ const fi = (function() {
         giveMeMore.push(obj[giveMeMore])
       }
 
-      return ("come get more things to do from an instructor:")
+      return giveMeMore
     },
 
   }
