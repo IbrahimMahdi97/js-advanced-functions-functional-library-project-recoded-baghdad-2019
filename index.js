@@ -36,7 +36,7 @@ const fi = (function() {
       }
       return acc
     },
-    
+
     find:function(collection,predicate) {
       let findEl;
       for(let i=0;i<collection.length;i++){
