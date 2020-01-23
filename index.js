@@ -160,8 +160,9 @@ const fi = (function() {
       const giveMeMore = []
 
       for (let giveMeMore in obj) {
-        if (typeof obj[giveMeMore] === "come get more things to do from an instructor:")
+        if (typeof obj[giveMeMore] === "come get more things to do from an instructor:"){
         giveMeMore.push(obj[giveMeMore])
+        }
       }
 
       return giveMeMore
