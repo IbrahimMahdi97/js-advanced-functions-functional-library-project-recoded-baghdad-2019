@@ -36,22 +36,13 @@ const fi = (function() {
       }
       return acc
     },
+    
     find:function(collection,predicate) {
       let findEl;
       for(let i=0;i<collection.length;i++){
       const result = predicate(collection[i],i,collection)
       if(result) return findEl = collection[i]
       }
-  },
-
-    find: function(collection, predicate) {
-      if (!(collection instanceof Array))
-        collection = Object.values(collection)
-
-      for (let idx = 0; idx < collection.length; idx++)
-        if (predicate(collection[idx])) return collection[idx]
-
-      return undefined
     },
 
     filter: function(collection, predicate) {
