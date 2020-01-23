@@ -13,14 +13,14 @@ const fi = (function() {
       return collection
     },
 
-    map: function(collection, iteratee) {
+    map: function(collection, cd) {
       if (!(collection instanceof Array))
         collection = Object.values(collection)
 
       const newArr = []
 
       for (let idx = 0; idx < collection.length; idx++)
-        newArr.push(iteratee(collection[idx]))
+        newArr.push(cd(collection[idx]))
 
       return newArr
     },
