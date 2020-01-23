@@ -70,8 +70,8 @@ const fi = (function() {
     },
 
     compact: function(collection) {
-      const badBad = new Set([false, null, 0, "", undefined, NaN])
-      return collection.filter(el => !badBad.has(el))
+      const comp = new Set([false, null, 0, "", undefined, NaN])
+      return collection.filter(el => !comp.has(el))
     },
 
     sortBy: function(collection, callback) {
