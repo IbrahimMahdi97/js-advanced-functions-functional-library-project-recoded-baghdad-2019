@@ -4,11 +4,11 @@ const fi = (function() {
       return 'Start by reading article'
     },
 
-    each: function(collection, iteratee) {
+    each: function(collection, cd) {
       const newCollection = (collection instanceof Array) ? collection.slice() : Object.values(collection)
 
       for (let idx = 0; idx < newCollection.length; idx++)
-        iteratee(newCollection[idx])
+        cd(newCollection[idx])
 
       return collection
     },
