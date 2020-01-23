@@ -26,21 +26,23 @@ const fi = (function() {
     },
 
 
-		reduce: function(c = [], callback = () => {}, acc) {
-			let collection = c.slice(0)
-
-			if (!acc) {
+		reduce: function(collection,cb,acc) {
+         if (!acc) {
 				acc = collection[0]
 				collection = collection.slice(1)
 			}
-
-			let len = collection.length;
-
-			for (let i = 0; i < len; i++) {
-				acc = callback(acc, collection[i], collection)
-			}
-			return acc;
-		},
+             for(let i=0; i<collection.length;i++){
+        acc = cb(acc,collection[i],collection);
+      }
+      return acc
+    },
+    find:function(collection,predicate) {
+      let findEl;
+      for(let i=0;i<collection.length;i++){
+      const result = predicate(collection[i],i,collection)
+      if(result) return findEl = collection[i]
+      }
+  },
 
     find: function(collection, predicate) {
       if (!(collection instanceof Array))
