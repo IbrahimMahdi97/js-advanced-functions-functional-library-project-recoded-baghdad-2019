@@ -74,10 +74,10 @@ const fi = (function() {
       return collection.filter(el => !comp.has(el))
     },
 
-    sortBy: function(collection, callback) {
-      const newArr = [...collection]
+    sortBy: function(coll, cb) {
+      const newArr = [...coll]
       return newArr.sort(function(a, b) {
-        return callback(a) - callback(b)
+        return cb(a) - cb(b)
       })
     },
 
