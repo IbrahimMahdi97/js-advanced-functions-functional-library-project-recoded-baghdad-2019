@@ -49,12 +49,12 @@ const fi = (function() {
       if (!(collection instanceof Array))
         collection = Object.values(collection)
 
-      const newArr = []
+      const nArr = []
 
       for (let idx = 0; idx < collection.length; idx++)
         if (predicate(collection[idx])) newArr.push(collection[idx])
 
-      return newArr
+      return nArr
     },
 
     size: function(collection) {
